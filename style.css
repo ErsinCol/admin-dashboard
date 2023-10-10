@@ -48,9 +48,99 @@ body {
 }
 
 .header {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-column: 2 / 3;
     grid-row-start: 1;
     background-color: #ffffff;
+    padding: 0.5rem 2rem;
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 0.25rem;
+}
+
+.search-bar {
+    display: inline-grid;
+    grid-template-columns: min-content 1fr;
+    gap: 0.75rem;
+}
+
+.search-bar > input {
+    border-radius: 1rem;
+    background-color: #e2e8f0;
+    border: none;
+    padding: 0.25rem 1rem;
+}
+
+.search-bar > input:focus {
+    outline: none;
+}
+
+.header .search-bar > img {
+    width: 25px;
+}
+
+.user-menu {
+    display: inline-grid;
+    column-gap: 1rem;
+    grid-template-columns: min-content min-content max-content;
+    align-items: center;
+    justify-self: end;
+}
+
+.notification {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.header .profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+.toolbar {
+    display: inline-grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2rem;
+}
+
+.toolbar > button {
+    background-color: #1992d4;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.user-profile {
+    display: inline-grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.user-profile > div {
+    display: inline-grid;
+    grid-template-rows: repeat(2,min-content);
+    font-weight: bold;
+    row-gap: 0.25rem;
+}
+
+.user-profile > div > span {
+    font-size: 1.2rem;
+}
+
+.user-profile .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
 .main-content {
