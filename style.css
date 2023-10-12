@@ -209,8 +209,8 @@ h4 {
 .view-btn,
 .share-btn {
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border: none;
     border-radius: 50%;
 }
