@@ -27,23 +27,23 @@ body {
     grid-template-columns: 50px 1fr;
     align-items: center;
     row-gap: 1rem;
+    column-gap: 0.5rem;
 }
 
-.sidebar > div:first-child span {
-    font-size: 2rem;
+.sidebar-title {
+    font-size: 2.5rem;
 }
 
-.sidebar > div span {
-    font-weight: bold;
-    font-size: 18px;
+.sidebar-menu-content {
+    font-size: 1.5rem;
 }
 
 .sidebar > div:first-child img {
-    width: 40px;
+    width: 50px;
 }
 
 .sidebar > div img {
-    width: 20px;
+    width: 25px;
     justify-self: center;
 }
 
@@ -116,8 +116,8 @@ body {
     background-color: #1992d4;
     color: white;
     border: none;
-    border-radius: 1rem;
-    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    padding: 0.75rem 1.5rem;
 }
 
 .user-profile {
