@@ -8,7 +8,7 @@ body {
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 3fr;
 }
 
 .sidebar {
@@ -107,8 +107,9 @@ body {
 
 .toolbar {
     display: inline-grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,minmax(120px, 1fr));
     column-gap: 2rem;
+    justify-self: end;
 }
 
 .toolbar > button {
@@ -145,17 +146,85 @@ body {
 
 .main-content {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-column: 2 / 3;
     grid-row-start: 2;
     background-color: #ccd1d8;
     gap: 2rem;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
-h3 {
+h2,
+h4 {
     margin: 0;
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-row: 1 / 3;
+    row-gap: 0.5rem;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.project-list-item {
+    background-color: white;
+    border-radius: 1rem;
+    border-left: 1rem solid #f0b429;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+}
+
+.project-info {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 0.5rem;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 1.2rem;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 0.75rem;
+    justify-self: end;
+}
+
+.favorite-btn,
+.view-btn,
+.share-btn {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+}
+
+.favorite-btn {
+    background: url("assets/icons/star-plus-outline.svg");
+}
+
+.view-btn {
+    background: url("assets/icons/eye-plus-outline.svg");
+}
+
+.share-btn {
+    background: url("assets/icons/share-variant-outline.svg");
 }
 
 .announcements{
@@ -167,24 +236,15 @@ h3 {
 .announcements-list {
     background-color: #ffffff;
     border-radius: 0.5rem;
-    padding: 1.5rem;
+    padding: 0.25rem 1.5rem;
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
 }
 
 .announcements-list-item{
     display: grid;
-    align-items: center;
-    border-bottom: 1px solid #ececec;
-}
-
-.announcements-title{
-    margin: 0;
-}
-
-.projects {
-    grid-row: 1 / 3;
-    background-color: red;
+    grid-template-rows: repeat(2, min-content);
 }
 
 .trending {
@@ -208,13 +268,19 @@ h3 {
     column-gap: 1rem;
 }
 
+.profile-info {
+    display: inline-grid;
+    grid-template-rows: repeat(2,min-content);
+    row-gap: 0.25rem;
+}
+
 .profile-photo {
     width: 55px;
     height: 55px;
     border-radius: 50%;
 }
 
-.profile-info > div:nth-child(2){
+.bio{
     color: #a1a1a1;
 }
 
